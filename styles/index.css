@@ -41,3 +41,177 @@ main {
 .cta-section {
     text-align: center;
 }
+
+/* Navigation Bar Styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #134f36;
+    color: white;
+    padding: 0.5rem 1rem; /* Reduced padding for a thinner navbar */
+    width: 100%;
+    max-width: 100vw; /*fills the viewport width */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Merriweather', sans-serif;
+    border-radius: 0 0 15px 15px; /* Added rounded bottom corners */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 0px;
+    
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: 'Merriweather', sans-serif;
+    text-align: center;
+    margin-left: 1rem; /* Added margin for spacing */
+    flex: 1; /* Allow it to take up space in the center */
+    text-align: center; /* Center the brand name */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0.5rem 0; /* Reduced vertical padding to make it thinner */
+    justify-content: space-evenly;
+    width: 100vw; /* Make it fill the viewport width */
+    max-width: 100%; /* Allow it to take full width */
+    background-color: #134f36;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #ff471a;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-right input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: none;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.about-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* Added padding for better click area */
+}
+
+.about-link:hover {
+    color: #ff471a;
+}
+
+.todays-special-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* Added padding for better click area */
+}
+.todays-special-link:hover {
+    color: #ff471a;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* Added padding for better click area */
+}
+
+.menu-link:hover {
+    color: #ff471a;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #134f36;
+        position: absolute;
+        top: 60px; /* Adjusted to align with navbar */
+        left: 0;
+        width: 100%; /* Full width on mobile */
+        padding: 0.5rem 0;
+        z-index: 999;
+        border-radius: 0 0 15px 15px; /* Added rounded bottom corners for mobile menu */
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        text-align: center; /* Center align items in mobile view */
+    }
+
+    .nav-center {
+        justify-content: flex-start;
+        display: block;
+        
+    }
+    
+    .nav-right {
+        display: none;
+    }
+    
+    .about-link {
+        display: none;
+    }
+
+    
+}
